@@ -1,4 +1,7 @@
 <script>
+  import Header from './Header.svelte';
+
+  import Footer from './Footer.svelte';
 	import Clientes from './Clientes.svelte';
 	import Standart from './Standart.svelte';
 	import Producto from './Producto.svelte'; 
@@ -14,13 +17,14 @@
   let opcion5 = false
   
 </script>
-
+<Header />
 <!-- Toggle B -->
+<main>
 <section class="text-gray-600 body-font">
 <!-- Toggle B <div class="bg-gray-400 text-gray-600 px-4 py-4 rounded relative text-sm text-center">
  --> 
-<div class="container px-5 py-6 mx-auto flex justify-center items-center">
-   <div class=" lg:w-2/6 md:w-1/2 bg-gray-400 flex justify-between  rounded-lg p-8  flex-col  w-full mt-10 md:mt-0 ">
+<div class="container px-0 py-0 mx-auto flex justify-center items-center">
+   <div class=" lg:w-2/6 md:w-1/2 bg-gray-400 flex justify-between   p-8  flex-col  w-full mt-0 md:mt-0 ">
       <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Ver Productos por cliente</h2>
        <div class="flex  justify-between items-center w-full mb-12">
   
@@ -123,11 +127,6 @@
   </div>
 </div>
 </section> 
-
-
-
- 
-
 {#if opcion1}
           <Producto/>
 {/if}
@@ -147,19 +146,21 @@
 {#if opcion5}
           <Clientes/>
 {/if}
+</main>
 
-
+<Footer/>
 
 <style>
-
 input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #48bb78;
 }
-
 /* Toggle B */
 input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #48bb78;
+}
+main {
+  background-color: rgba(156, 163, 175);
 }
 </style>
