@@ -162,7 +162,7 @@
                   </div>
                    <!-- label -->
                   <div class="ml-3 text-gray-700 font-medium">
-                  Troquelado
+                  Bandeja
                    </div>
            </label>
         </div>
