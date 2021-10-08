@@ -65,7 +65,7 @@ $: alldataFilter = _.where(alldata, {cliente: cliente});
         <h2 class="text-sm title-font text-gray-800 text-2xl tracking-widest">{item.cliente}</h2>
         <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">{item.codigo1}</h1>
         <div class="flex mb-4">
-          <a class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">Descripción</a>
+          <p class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">Descripción</p>
          
         </div>
         <p class="leading-relaxed mb-4">{item.descripcion}</p>
