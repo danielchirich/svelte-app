@@ -86,33 +86,67 @@ $: alldataFilter = _.where(alldata, {cliente: cliente});
           <span class="ml-auto text-gray-900">{item.codigo2}</span>
         </div>
         {/if}
-        
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-800">Largo</span>
-          <span class="ml-auto text-gray-900">{item.largo}</span>
-        </div>
+        {#if item.largo === null}
+           
+        {:else}
+          <div class="flex border-t border-gray-200 py-2">
+              <span class="text-gray-800">Largo</span>
+              <span class="ml-auto text-gray-900">{item.largo}</span>
+         </div>
+        {/if}
 
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-800">Ancho</span>
-          <span class="ml-auto text-gray-900">{item.ancho}</span>
+        {#if item.largo === null}
+          
+        {:else}
+          <div class="flex border-t border-gray-200 py-2">
+              <span class="text-gray-800">Ancho</span>
+              <span class="ml-auto text-gray-900">{item.ancho}</span>
         </div>
+        {/if}
+
+        
         {#if item.alto === null}           
         {:else}
           <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-800">Alto</span>
           <span class="ml-auto text-gray-900">{item.alto}</span>
         </div>
-        {/if}         
-        
-        <div class="flex border-t border-gray-200 py-2">
+        {/if}
+
+        {#if item.aletasSuperiores === null}
+         
+        {:else}
+          <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-800">Aletas Superiores</span>
           <span class="ml-auto text-gray-900">{item.aletasSuperiores}</span>
         </div>
-
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-800">Aletas Inferiores</span>
-          <span class="ml-auto text-gray-900">{item.aletasInferiores}</span>
+        {/if}
+        
+        {#if item.aletasInferiores === null}
+         
+        {:else}
+         <div class="flex border-t border-gray-200 py-2">
+             <span class="text-gray-800">Aletas Inferiores</span>
+             <span class="ml-auto text-gray-900">{item.aletasInferiores}</span>
         </div>
+        {/if} 
+
+        {#if item.largoTroquelar === null}           
+        {:else}
+          <div class="flex border-t border-gray-200 py-2">
+          <span class="text-gray-800">Largo para Troquelar</span>
+          <span class="ml-auto text-gray-900">{item.largoTroquelar} lbs.</span>
+        </div> 
+        {/if}
+        
+        {#if item.anchoTroquelar === null}           
+        {:else}
+          <div class="flex border-t border-gray-200 py-2">
+          <span class="text-gray-800">Ancho para Troquelar</span>
+          <span class="ml-auto text-gray-900">{item.anchoTroquelar} lbs.</span>
+        </div> 
+        {/if}
+        
 
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-800">Libraje</span>
