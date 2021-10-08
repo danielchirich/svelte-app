@@ -39,9 +39,7 @@
     let codigo2= ''
     let contenido= ''
     let largo = ''
-    let ancho = ''
-    let alto = ''
-      
+    let ancho = ''       
     let impresionColores= ''
     let libraje= ''
     let linerExt= ''
@@ -59,7 +57,7 @@
             contenido: '',
             largo: '',
             ancho: '',
-            alto: '',        
+                   
             impresionColores: '',
             libraje: '',
             linerExt: '',
@@ -81,7 +79,7 @@
             contenido: '',
             largo: '',
             ancho: '',
-            alto: '',       
+                 
             impresionColores: '',
             libraje: '',
             linerExt: '',
@@ -143,11 +141,7 @@
           <input bind:value={item.ancho} type=number id="ancho" name="ancho" placeholder='Enter Ancho...' class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
         </div>
 
-        <div class="relative mb-4">
-            <label for="alto" class="leading-7 text-sm text-gray-600">Alto</label>
-            <input bind:value={item.alto} type=number id="alto" name="alto" placeholder='Enter Alto...' class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-  
+         
         
         
         <div class="relative mb-4">
@@ -215,5 +209,6 @@
       </div>
     </div>
   </section>
+  
   
   
