@@ -5,9 +5,12 @@
   import Footer from './Footer.svelte';
   import Clientes from './Clientes.svelte';
   import Standart from './Standart.svelte';
+  // @ts-ignore
   import Producto from './Producto.svelte'; 
   import Delete from "./Delete.svelte"; 
   import Upsert from './Upsert.svelte'; 
+  import Piso from './Piso.svelte';
+
   
   import './lib/TailwindCSS.svelte'
  
@@ -18,6 +21,7 @@
   let opcion5 = false
   let opcion6 = false
   let opcion7 = false
+  let opcion8 = false
   
 </script>
 <Header />
@@ -166,6 +170,26 @@
                    </div>
            </label>
         </div>
+
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Cargar datos para Piso</h2> 
+           <div class="flex items-start justify-item-end w-full mb-12">
+  
+            <label for="toggleB8" class="flex items-center cursor-pointer">
+                  <!-- toggle -->
+                  <div class="relative">
+                   <!-- input -->
+                  <input type="checkbox" id="toggleB8" class="sr-only" bind:checked={opcion8}>
+                  <!-- line -->
+                  <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                  <!-- dot -->
+                  <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                  </div>
+                   <!-- label -->
+                  <div class="ml-3 text-gray-700 font-medium">
+                  Piso
+                   </div>
+           </label>
+        </div>
   </div>
 </div>
 </section> 
@@ -195,6 +219,9 @@
 
 {#if opcion7}
           <Bandeja/>
+{/if}
+{#if opcion8}
+          <Piso/>
 {/if}
 </main>
 
